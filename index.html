@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <div class="FormContainer bg-secondary min-vh-100 py-5">
+      <div class="container">
+        <h1 class="text-center py-4 text-white">Form Data</h1>
+        <div class="content">
+          <label for="ProductName" class="text-white">Product Name :</label>
+          <input
+            class="form-control mb-3"
+            type="text"
+            id="ProductName"
+            oninput="regxProduct()"
+          />
+          <label for="ProductPrice" class="text-white">Product Price :</label>
+          <input
+            class="form-control mb-3"
+            type="text"
+            id="ProductPrice"
+            oninput="regxProduct()"
+          />
+          <label for="Productdec" class="text-white">Product dec :</label>
+          <input
+            class="form-control mb-3"
+            type="text"
+            id="Productdec"
+            oninput="regxProduct()"
+          />
+          <label for="ProductCat" class="text-white">Product Cat :</label>
+          <input
+            class="form-control mb-3"
+            type="text"
+            id="ProductCat"
+            oninput="regxProduct()"
+          />
+          <button
+            class="btn btn-success addd"
+            id="addAndUpdate"
+            onclick=" Actionbtn();"
+          >
+            Add Product
+          </button>
+        </div>
+        <div class="searchInput mt-5 w-75 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Product Name"
+            id="searchInput"
+            oninput="searchProduct(this.value)"
+          />
+        </div>
+        <div class="clearAll d-flex justify-content-end mt-5">
+          <button class="btn btn-dark px-4" onclick="deleteAll()">
+            Delete All
+          </button>
+        </div>
+        <div class="tableData py-2">
+          <table class="table table-striped text-center">
+            <thead>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Categoryt</th>
+              <th>Action</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
